@@ -1,0 +1,29 @@
+---
+- hosts: all
+  gather_facts: no
+  vars_prompt:
+
+    - name: count
+      prompt: enter the number of luns
+      private: false
+
+    - name: lun_name
+      prompt: enter the lun_name
+      private: false
+    
+    - name: lun_size
+      prompt: enter the lun_size
+      private: false
+
+    - name: hostnames
+      prompt: enter the hostnames
+      private: false
+
+    - name: lun_map
+      prompt: enter the lun_map
+      private: false
+    
+  tasks:
+    - import_role:
+        name: json
+      

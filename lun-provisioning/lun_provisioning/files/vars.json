@@ -1,0 +1,10 @@
+{
+  "luns":{ 
+    "first": {
+      "lun_name": "test",
+      "lun_size": "20",
+      "hostnames": "test_hostname",
+      "lun_map": "test"
+    }
+  }
+}

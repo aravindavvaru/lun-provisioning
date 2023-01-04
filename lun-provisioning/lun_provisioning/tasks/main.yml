@@ -1,0 +1,13 @@
+---
+# tasks file for lun_provisioning
+- name: test loop
+  vars:
+    jsonVar: "{{ lookup('file', 'vars.json') | from_json }}"
+  debug:
+    msg: "variables: {{ jsonVar }}"
+        
+- name: test loop
+  vars:
+    jsonVar: "{{ lookup('file', 'vars.json') | from_json }}"
+  debug:
+    msg: "variables: {{ jsonVar.luns }}"

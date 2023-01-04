@@ -1,0 +1,12 @@
+---
+# tasks file for json
+- name: print rendered template
+  debug:
+    var: 
+      rendered_template: "{{ lookup('template', './vars.j2') }}"
+  register: entire_file
+
+- name: copy variables to file
+  local_action: copy content={{ entire_file }} dest=output.json
+    
+
